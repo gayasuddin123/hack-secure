@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import logo from '../assets/hacksecurelogowithouttext.png'
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Menu, 
@@ -70,8 +71,12 @@ const Layout = ({ children }) => {
               onClick={() => scrollToTop()}
             >
               <div className="relative">
-                <Shield className="w-10 h-10 text-red-500 group-hover:text-red-400 transition-colors" />
-                <div className="absolute inset-0 bg-red-500/20 blur-xl group-hover:bg-red-500/40 transition-all" />
+                 <img src={logo} alt="Logo" className="
+                    h-40 w-20 object-contain
+                    brightness-180 contrast-80
+                    drop-shadow-[0_0_6px_rgba(255,0,0,0.35)]
+                  "/>
+                <div className="absolute inset-0 bg-red-500/10 blur-xl" />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">

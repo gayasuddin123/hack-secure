@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logo from '../assets/hacksecurelogo.png'
 import { 
   Shield, 
   Lock, 
@@ -191,11 +192,15 @@ const HomePage = () => {
           </div>
 
           {/* Animated Shield */}
-          <div className="relative w-48 h-48 mx-auto mb-12 animate-float">
+          <div className="relative w-74 h-74 mx-auto mb-12 animate-float">
             <div className="absolute inset-0 bg-red-500/20 rounded-full blur-3xl animate-pulse-glow" />
             <div className="relative w-full h-full flex items-center justify-center">
-              <Shield className="w-32 h-32 text-red-500" strokeWidth={1} />
-              <Lock className="absolute w-12 h-12 text-white" />
+              <img src={logo} alt="Logo" className="
+                  h-100 w-800 object-contain
+                  brightness-110 contrast-110
+                  drop-shadow-[0_0_6px_rgba(255,0,0,0.35)]
+                "/>
+              {/* <Lock className="absolute w-12 h-12 text-white" /> */}
             </div>
           </div>
 
