@@ -20,6 +20,10 @@ const Layout = ({ children }) => {
 	const [showScrollTop, setShowScrollTop] = useState(false);
 	const location = useLocation();
 
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location.pathname]);
+	
 	const navLinks = [
 		{ name: "Home", to: "/" },
 		{ name: "Events", to: "/events" },
@@ -43,6 +47,7 @@ const Layout = ({ children }) => {
 	const scrollToTop = () => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
+
 
 	return (
 		<div className="min-h-screen bg-[#0a0a0a] text-white">
@@ -116,21 +121,16 @@ const Layout = ({ children }) => {
 						</div>
 
 						{/* Mobile Menu Button */}
-						<div className="max-w-7xl mx-auto px-4 py-6 space-y-4">
-							{navLinks.map((link) => (
-								<NavLink
-									key={link.name}
-									to={link.to}
-									className="block w-full text-left px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
-									onClick={() => setIsMenuOpen(false)}
-								>
-									{link.name}
-								</NavLink>
-							))}
-							<button className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-red-600 to-red-500 text-white font-semibold rounded-lg">
-								Register Soon
-							</button>
-						</div>
+						<button
+							onClick={() => setIsMenuOpen(!isMenuOpen)}
+							className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
+						>
+							{isMenuOpen ? (
+								<X className="w-6 h-6" />
+							) : (
+								<Menu className="w-6 h-6" />
+							)}
+						</button>
 					</div>
 				</div>
 
@@ -146,7 +146,8 @@ const Layout = ({ children }) => {
 						{navLinks.map((link) => (
 							<button
 								key={link.name}
-								onClick={() => handleNavClick(link.to)}
+								to={link.to}
+								onClick={() => setIsMenuOpen(false)}
 								className="block w-full text-left px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
 							>
 								{link.name}
@@ -214,9 +215,7 @@ const Layout = ({ children }) => {
 										<NavLink
 											to={link.to}
 											className="text-gray-400 hover:text-red-500 transition-colors"
-										>
-											{link.name}
-										</NavLink>
+										></NavLink>
 									</li>
 								))}
 							</ul>
