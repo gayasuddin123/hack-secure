@@ -21,14 +21,14 @@ const Layout = ({ children }) => {
 	const location = useLocation();
 
 	const navLinks = [
-  { name: "Home", to: "/" },
-  { name: "Events", to: "/events" },
-  { name: "About", to: "/about" },
-  { name: "Why Join", to: "/why-join" },
-  { name: "Sponsors", to: "/sponsors" },
-  { name: "FAQs", to: "/faq" },
-  { name: "Contact", to: "/contact" },
-];
+		{ name: "Home", to: "/" },
+		{ name: "Events", to: "/events" },
+		{ name: "About", to: "/about" },
+		{ name: "Why Join", to: "/why-join" },
+		{ name: "Sponsors", to: "/sponsors" },
+		{ name: "FAQs", to: "/faq" },
+		{ name: "Contact", to: "/contact" },
+	];
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -42,18 +42,6 @@ const Layout = ({ children }) => {
 
 	const scrollToTop = () => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
-	};
-
-	const handleNavClick = (href) => {
-		if (href.startsWith("#")) {
-			const element = document.querySelector(href);
-			if (element) {
-				element.scrollIntoView({ behavior: "smooth" });
-			}
-		} else {
-			// For external or route navigation
-			window.location.href = href; // or use navigate from react-router
-		}
 	};
 
 	return (
@@ -99,14 +87,21 @@ const Layout = ({ children }) => {
 						{/* Desktop Navigation */}
 						<div className="hidden lg:flex items-center gap-1">
 							{navLinks.map((link) => (
-								<button
+								<NavLink
 									key={link.name}
-									onClick={() => handleNavClick(link.to)}
-									className="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors group"
+									to={link.to}
+									className={({ isActive }) =>
+										`relative px-4 py-2 text-sm font-medium transition-colors group ${
+											isActive
+												? "text-white"
+												: "text-gray-300 hover:text-white"
+										}`
+									}
+									onClick={() => setIsMenuOpen(false)}
 								>
 									{link.name}
 									<span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-300" />
-								</button>
+								</NavLink>
 							))}
 						</div>
 
