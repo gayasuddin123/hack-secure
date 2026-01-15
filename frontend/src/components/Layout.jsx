@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import logo from "../assets/hacksecurelogowithouttext.png";
-import { href, Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import {
 	Menu,
 	X,
@@ -21,15 +21,14 @@ const Layout = ({ children }) => {
 	const location = useLocation();
 
 	const navLinks = [
-		{ name: "Home", href: "/" },
-		{ name: "Events", href: "/events" },
-		{ name: "About", href: "#about" },
-		{ name: "Why Join", href: "#why-join" },
-		{ name: "AI Features", href: "#ai-features" },
-		{ name: "Sponsors", href: "#sponsors" },
-		{ name: "FAQs", href: "#faq" },
-		{ name: "Contact", href: "#contact" },
-	];
+  { name: "Home", to: "/" },
+  { name: "Events", to: "/events" },
+  { name: "About", to: "/about" },
+  { name: "Why Join", to: "/why-join" },
+  { name: "Sponsors", to: "/sponsors" },
+  { name: "FAQs", to: "/faq" },
+  { name: "Contact", to: "/contact" },
+];
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -70,7 +69,7 @@ const Layout = ({ children }) => {
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="flex items-center justify-between h-20">
 						{/* Logo */}
-						<Link
+						<NavLink
 							to="/"
 							className="flex items-center gap-3 group"
 							onClick={() => scrollToTop()}
@@ -95,14 +94,14 @@ const Layout = ({ children }) => {
 									2026
 								</span>
 							</div>
-						</Link>
+						</NavLink>
 
 						{/* Desktop Navigation */}
 						<div className="hidden lg:flex items-center gap-1">
 							{navLinks.map((link) => (
 								<button
 									key={link.name}
-									onClick={() => handleNavClick(link.href)}
+									onClick={() => handleNavClick(link.to)}
 									className="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors group"
 								>
 									{link.name}
@@ -147,7 +146,7 @@ const Layout = ({ children }) => {
 						{navLinks.map((link) => (
 							<button
 								key={link.name}
-								onClick={() => handleNavClick(link.href)}
+								onClick={() => handleNavClick(link.to)}
 								className="block w-full text-left px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
 							>
 								{link.name}
@@ -214,7 +213,7 @@ const Layout = ({ children }) => {
 									<li key={link.name}>
 										<button
 											onClick={() =>
-												handleNavClick(link.href)
+												handleNavClick(link.to)
 											}
 											className="text-gray-400 hover:text-red-500 transition-colors"
 										>
