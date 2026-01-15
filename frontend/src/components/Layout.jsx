@@ -116,16 +116,21 @@ const Layout = ({ children }) => {
 						</div>
 
 						{/* Mobile Menu Button */}
-						<button
-							onClick={() => setIsMenuOpen(!isMenuOpen)}
-							className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
-						>
-							{isMenuOpen ? (
-								<X className="w-6 h-6" />
-							) : (
-								<Menu className="w-6 h-6" />
-							)}
-						</button>
+						<div className="max-w-7xl mx-auto px-4 py-6 space-y-4">
+							{navLinks.map((link) => (
+								<NavLink
+									key={link.name}
+									to={link.to}
+									className="block w-full text-left px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+									onClick={() => setIsMenuOpen(false)}
+								>
+									{link.name}
+								</NavLink>
+							))}
+							<button className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-red-600 to-red-500 text-white font-semibold rounded-lg">
+								Register Soon
+							</button>
+						</div>
 					</div>
 				</div>
 
@@ -206,14 +211,12 @@ const Layout = ({ children }) => {
 							<ul className="space-y-3">
 								{navLinks.map((link) => (
 									<li key={link.name}>
-										<button
-											onClick={() =>
-												handleNavClick(link.to)
-											}
+										<NavLink
+											to={link.to}
 											className="text-gray-400 hover:text-red-500 transition-colors"
 										>
 											{link.name}
-										</button>
+										</NavLink>
 									</li>
 								))}
 							</ul>
