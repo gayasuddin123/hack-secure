@@ -144,14 +144,14 @@ const Layout = ({ children }) => {
 				>
 					<div className="max-w-7xl mx-auto px-4 py-6 space-y-4">
 						{navLinks.map((link) => (
-							<button
+							<NavLink
 								key={link.name}
 								to={link.to}
 								onClick={() => setIsMenuOpen(false)}
 								className="block w-full text-left px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
 							>
 								{link.name}
-							</button>
+							</NavLink>
 						))}
 						<button className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-red-600 to-red-500 text-white font-semibold rounded-lg">
 							Register Soon
