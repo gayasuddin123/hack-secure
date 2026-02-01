@@ -187,7 +187,7 @@ const Home = () => {
           {/* Subtitle */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-16 bg-gradient-to-r from-transparent to-red-500" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">HACK SECURE 2026</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white">CVSCTF 2026</h2>
             <div className="h-px w-16 bg-gradient-to-l from-transparent to-red-500" />
           </div>
 
@@ -252,7 +252,7 @@ const Home = () => {
           <div className="text-center mb-16">
             <span className="text-red-500 font-semibold tracking-wider uppercase">Discover</span>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mt-4 mb-6">
-              About <span className="text-red-500">Hack Secure 2026</span>
+              About <span className="text-red-500">CVSCTF 2026</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-transparent mx-auto" />
           </div>
@@ -260,10 +260,9 @@ const Home = () => {
           {/* Main Content */}
           <div className="max-w-4xl mx-auto text-center mb-16">
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              Hack Secure 2026 is a <span className="text-white font-semibold">national-level Web + AI hackathon</span> organized 
-              by <span className="text-red-400">Codevirus Security Pvt. Ltd.</span>, focusing on secure web innovation 
-              and artificial intelligence. Join hundreds of talented developers in this ultimate 
-              coding championship.
+              CVSCTF 2026 is a <span className="text-white font-semibold">national-level Web + AI Cybersecurity CTF competition</span> organized 
+              by <span className="text-red-400">Codevirus Security Pvt. Ltd.</span>, Compete with India’s finest minds in an intense challenge combining real-world vulnerabilities, AI-driven puzzles, and high-pressure cyber scenarios.
+
             </p>
             
             <div className="flex flex-wrap items-center justify-center gap-8 text-gray-400">
@@ -289,9 +288,7 @@ const Home = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  To cultivate a generation of security-conscious developers who can build 
-                  robust, AI-enhanced web solutions that address real-world challenges while 
-                  maintaining the highest standards of cybersecurity.
+                  To build the next generation of cybersecurity talent capable of identifying vulnerabilities, crafting exploits, and defending systems with precision and intelligence.
                 </p>
               </div>
             </div>
@@ -305,9 +302,7 @@ const Home = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  To become India's premier hackathon platform where innovation meets security, 
-                  inspiring participants to push boundaries and create transformative technology 
-                  solutions for a safer digital world.
+                  To become India’s most respected cybersecurity battleground, where ethical hackers, students, and researchers collaborate to push the boundaries of digital defense.
                 </p>
               </div>
             </div>
