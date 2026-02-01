@@ -41,7 +41,7 @@ const Home = () => {
   // FAQ Data
   const faqs = [
     {
-      question: "Who can participate in Hack Secure 2026?",
+      question: "Who can participate in CVSCTF 2026?",
       answer: "Students from any college or university across India can participate. Whether you're a beginner or an experienced developer, everyone is welcome to join this exciting hackathon."
     },
     {
@@ -57,7 +57,7 @@ const Home = () => {
       answer: "Basic knowledge of web development (HTML, CSS, JavaScript) and interest in AI/ML is recommended. However, the hackathon is designed to be beginner-friendly with mentorship support available."
     },
     {
-      question: "Is Hack Secure 2026 beginner friendly?",
+      question: "Is CVSCTF 2026 beginner friendly?",
       answer: "Absolutely! We welcome participants of all skill levels. We'll have mentors, workshops, and resources to help beginners get started and learn throughout the event."
     },
     {
@@ -400,11 +400,11 @@ const Home = () => {
             <div className="order-1 lg:order-2">
               <span className="text-red-500 font-semibold tracking-wider uppercase">Benefits</span>
               <h2 className="text-4xl sm:text-5xl font-black mt-4 mb-6">
-                Why Join <span className="text-red-500">Hack Secure 2026?</span>
+                Why Join <span className="text-red-500">CVSCTF 2026?</span>
               </h2>
               <p className="text-gray-400 text-lg mb-10">
                 Join thousands of developers in this ultimate hackathon experience. 
-                Here's what makes Hack Secure 2026 unmissable:
+                Here's what makes CVSCTF 2026 unmissable:
               </p>
 
               {/* Benefit Cards */}
@@ -430,8 +430,7 @@ const Home = () => {
               {/* CTA Button */}
               <button className="group px-8 py-4 bg-gradient-to-r from-red-600 to-red-500 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-red-500/25 transition-all duration-300 hover:scale-105">
                 <span className="flex items-center gap-2">
-                  Be Part of the Hack
-                  <Zap className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  Be Part of the CVSCTF            <Zap className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                 </span>
               </button>
             </div>
@@ -539,7 +538,7 @@ const Home = () => {
 
         {/* Become Sponsor CTA */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 text-center">
-          <p className="text-gray-400 mb-4">Interested in sponsoring Hack Secure 2026?</p>
+          <p className="text-gray-400 mb-4">Interested in sponsoring CVSCTF 2026?</p>
           <button className="px-6 py-3 border border-red-500/50 text-red-400 rounded-lg hover:bg-red-500/10 transition-colors">
             Become a Sponsor
           </button>
@@ -734,7 +733,7 @@ const Home = () => {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="p-12 rounded-3xl border border-red-500/20 bg-gradient-to-br from-red-500/10 via-transparent to-transparent">
             <h2 className="text-4xl sm:text-5xl font-black mb-6">
-              Ready to <span className="text-red-500">Hack</span>?
+              Ready to <span className="text-red-500">CVSCTF?
             </h2>
             <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
               Join hundreds of developers at India's most exciting Web + AI hackathon. 
